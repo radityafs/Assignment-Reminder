@@ -139,7 +139,7 @@ function decodeBase64(base64) {
                                         "Content-Type": "application/x-www-form-urlencoded;",
                                     },
                                     body: urlencoded,
-                                });
+                                }).then((res) => res.json())
 
                                 if (postAbsensi.code == 200) {
                                     console.log(`[INFO] : Sukses Absensi ${findUrl.matkul} - ${panelAbsen.meetingCount}`)
